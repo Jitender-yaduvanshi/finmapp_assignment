@@ -1,6 +1,8 @@
-# fin_mapp_project
+fin_mapp_project
 
-A new Flutter project.
+Sample Images:
+![Alt Text]([url_to_image](https://github.com/Jitender-yaduvanshi/finmapp_assignment/blob/main/sample%20images/bank.jpeg?raw=true))
+
 
 ## Getting Started
 
