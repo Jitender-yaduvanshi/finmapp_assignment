@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:developer';
 import 'package:fin_mapp_project/result.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -59,7 +58,7 @@ class _MyHomePageState extends State<AboutLoan>
     double height = MediaQuery.sizeOf(context).height;
     return Scaffold(
       body: (isLoading)
-          ? Center(
+          ? const Center(
               child: CircularProgressIndicator(),
             )
           : Padding(
@@ -82,114 +81,110 @@ class _MyHomePageState extends State<AboutLoan>
                   SizedBox(
                     height: height * 0.03,
                   ),
-                  Positioned(
-                    top: height * 0.12,
-                    left: width * 0.38,
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        InkWell(
-                          onTap: () {
-                            setState(() {
-                              currentIndex = 0;
-                              _controller.jumpToPage(0);
-                            });
-                          },
-                          child: Container(
-                            width: width * 0.15,
-                            height: height * 0.01,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border:
-                                  Border.all(color: Colors.white, width: 1.5),
-                              color: (currentIndex == 0)
-                                  ? Colors.lightGreen
-                                  : Colors.grey,
-                            ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            currentIndex = 0;
+                            _controller.jumpToPage(0);
+                          });
+                        },
+                        child: Container(
+                          width: width * 0.15,
+                          height: height * 0.01,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            border:
+                                Border.all(color: Colors.white, width: 1.5),
+                            color: (currentIndex == 0)
+                                ? Colors.lightGreen
+                                : Colors.grey,
                           ),
                         ),
-                        InkWell(
-                          onTap: () {
-                            setState(() {
-                              currentIndex = 1;
-                              _controller.jumpToPage(1);
-                            });
-                          },
-                          child: Container(
-                            width: width * 0.15,
-                            height: height * 0.01,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border:
-                                  Border.all(color: Colors.white, width: 1.5),
-                              color: (currentIndex == 1)
-                                  ? Colors.lightGreen
-                                  : Colors.grey,
-                            ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            currentIndex = 1;
+                            _controller.jumpToPage(1);
+                          });
+                        },
+                        child: Container(
+                          width: width * 0.15,
+                          height: height * 0.01,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            border:
+                                Border.all(color: Colors.white, width: 1.5),
+                            color: (currentIndex == 1)
+                                ? Colors.lightGreen
+                                : Colors.grey,
                           ),
                         ),
-                        InkWell(
-                          onTap: () {
-                            setState(() {
-                              currentIndex = 2;
-                              _controller.jumpToPage(2);
-                            });
-                          },
-                          child: Container(
-                            width: width * 0.15,
-                            height: height * 0.01,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border:
-                                  Border.all(color: Colors.white, width: 1.5),
-                              color: (currentIndex == 2)
-                                  ? Colors.lightGreen
-                                  : Colors.grey,
-                            ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            currentIndex = 2;
+                            _controller.jumpToPage(2);
+                          });
+                        },
+                        child: Container(
+                          width: width * 0.15,
+                          height: height * 0.01,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            border:
+                                Border.all(color: Colors.white, width: 1.5),
+                            color: (currentIndex == 2)
+                                ? Colors.lightGreen
+                                : Colors.grey,
                           ),
                         ),
-                        InkWell(
-                          onTap: () {
-                            setState(() {
-                              currentIndex = 3;
-                              _controller.jumpToPage(3);
-                            });
-                          },
-                          child: Container(
-                            width: width * 0.18,
-                            height: height * 0.01,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border:
-                                  Border.all(color: Colors.white, width: 1.5),
-                              color: (currentIndex == 3)
-                                  ? Colors.lightGreen
-                                  : Colors.grey,
-                            ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            currentIndex = 3;
+                            _controller.jumpToPage(3);
+                          });
+                        },
+                        child: Container(
+                          width: width * 0.18,
+                          height: height * 0.01,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            border:
+                                Border.all(color: Colors.white, width: 1.5),
+                            color: (currentIndex == 3)
+                                ? Colors.lightGreen
+                                : Colors.grey,
                           ),
                         ),
-                        InkWell(
-                          onTap: () {
-                            setState(() {
-                              currentIndex = 4;
-                              _controller.jumpToPage(4);
-                            });
-                          },
-                          child: Container(
-                            width: width * 0.15,
-                            height: height * 0.01,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(5),
-                              border:
-                                  Border.all(color: Colors.white, width: 1.5),
-                              color: (currentIndex == 4)
-                                  ? Colors.lightGreen
-                                  : Colors.grey,
-                            ),
+                      ),
+                      InkWell(
+                        onTap: () {
+                          setState(() {
+                            currentIndex = 4;
+                            _controller.jumpToPage(4);
+                          });
+                        },
+                        child: Container(
+                          width: width * 0.15,
+                          height: height * 0.01,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(5),
+                            border:
+                                Border.all(color: Colors.white, width: 1.5),
+                            color: (currentIndex == 4)
+                                ? Colors.lightGreen
+                                : Colors.grey,
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                   SizedBox(
                       height: height * 0.721,
@@ -222,7 +217,6 @@ class _MyHomePageState extends State<AboutLoan>
                                 scrollDirection: Axis.horizontal,
                                 itemBuilder: (context, index) {
                                   var res = snapshot.data![currentIndex];
-                                  log('dd2dd:${snapshot.data!.length}');
                                   return Padding(
                                     padding: const EdgeInsets.only(
                                         left: 3.0, right: 3.0),
