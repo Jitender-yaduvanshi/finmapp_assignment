@@ -1,7 +1,7 @@
 fin_mapp_project
 
 Sample Images:
-![Alt Text]([url_to_image](https://github.com/Jitender-yaduvanshi/finmapp_assignment/blob/main/sample%20images/bank.jpeg?raw=true))
+![Alt Text]([sample images/bank.jpeg)
 
 
 ## Getting Started
